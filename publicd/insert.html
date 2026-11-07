@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Quiz - BHAVANA</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <a class="logo" href="/">BHAVANA<span>.</span></a>
+        <nav>
+            <a href="/">Dashboard</a>
+            <a href="insert.html">Create Quiz</a>
+            <a href="delete.html">Delete</a>
+            <a href="list.html">Quiz List</a>
+            <a href="listone.html">Find Quiz</a>
+            <a href="exam.html">Attend Exam</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="page-heading">
+            <p class="eyebrow">EXAMINATION SETUP</p>
+            <h1>Create Quiz & Add Questions</h1>
+            <p>Enter quiz information first, then add multiple-choice questions.</p>
+        </section>
+
+        <section class="form-layout">
+            <form id="quizForm" class="panel">
+                <h2>Quiz Information</h2>
+                <label>Quiz Title
+                    <input name="title" required placeholder="Example: Model Test 1">
+                </label>
+                <label>Subject
+                    <input name="subject" required placeholder="Enter subject">
+                </label>
+                <label>Total Marks
+                    <input type="number" name="total_marks" min="1" required>
+                </label>
+                <label>Duration (minutes)
+                    <input type="number" name="duration" min="1" required>
+                </label>
+                <button class="btn" type="submit">Create Quiz</button>
+                <p id="quizMessage" class="message"></p>
+            </form>
+
+            <form id="questionForm" class="panel">
+                <h2>Add Question</h2>
+                <label>Select Quiz
+                    <select name="quiz_id" id="questionQuiz" required>
+                        <option value="">Select a quiz</option>
+                    </select>
+                </label>
+                <label>Question
+                    <input name="question_text" required placeholder="Enter question">
+                </label>
+                <label>Option A
+                    <input name="option_a" required>
+                </label>
+                <label>Option B
+                    <input name="option_b" required>
+                </label>
+                <label>Option C
+                    <input name="option_c" required>
+                </label>
+                <label>Option D
+                    <input name="option_d" required>
+                </label>
+                <label>Correct Answer
+                    <select name="correct_answer" required>
+                        <option value="">Select correct option</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                    </select>
+                </label>
+                <button class="btn btn-dark" type="submit">Add Question</button>
+                <p id="questionMessage" class="message"></p>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

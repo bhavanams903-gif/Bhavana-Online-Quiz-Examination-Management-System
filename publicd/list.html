@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz List - BHAVANA</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <a class="logo" href="/">BHAVANA<span>.</span></a>
+        <nav>
+            <a href="/">Dashboard</a>
+            <a href="insert.html">Create Quiz</a>
+            <a href="delete.html">Delete</a>
+            <a href="list.html">Quiz List</a>
+            <a href="listone.html">Find Quiz</a>
+            <a href="exam.html">Attend Exam</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="page-heading">
+            <p class="eyebrow">DATABASE RECORDS</p>
+            <h1>Quizzes & Student Results</h1>
+            <p>Review created examinations and student performance.</p>
+        </section>
+
+        <section class="panel">
+            <div class="table-title">
+                <h2>All Quizzes</h2>
+                <input id="quizSearch" placeholder="Search quizzes...">
+            </div>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Quiz ID</th>
+                            <th>Title</th>
+                            <th>Subject</th>
+                            <th>Marks</th>
+                            <th>Duration</th>
+                            <th>Questions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="quizTable">
+                        <tr><td colspan="6">Loading quizzes...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="panel">
+            <div class="table-title">
+                <h2>Student Results</h2>
+                <button class="btn btn-small" onclick="loadResults()">Refresh</button>
+            </div>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Result ID</th>
+                            <th>Student</th>
+                            <th>Quiz</th>
+                            <th>Score</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="resultsTable">
+                        <tr><td colspan="6">Loading results...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BHAVANA - Online Quiz Examination</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <h1>Bhavana Online Quiz Examination Management System</h1>
+        <a class="logo" href="/"><span>.</span></a>
+        <nav>
+            <a href="/">Dashboard</a>
+            <a href="insert.html">Create Quiz</a>
+            <a href="delete.html">Delete</a>
+            <a href="list.html">Quiz List</a>
+            <a href="listone.html">Find Quiz</a>
+            <a href="exam.html">Attend Exam</a>
+        </nav>
+        <div id="accountArea" class="account-area"></div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <p class="eyebrow">ONLINE EXAMINATION MANAGEMENT</p>
+            <h1>Welcome to <span>BHAVANA</span></h1>
+            <p>Create online quizzes, attend examinations, submit answers and view results in one place.</p>
+            <a class="btn hero-btn" href="insert.html">+ Create a Quiz</a>
+        </section>
+
+        <section class="stats">
+            <article class="stat-card">
+                <div class="stat-icon purple">▤</div>
+                <p>Total Quizzes</p>
+                <h2 id="totalQuizzes">0</h2>
+            </article>
+            <article class="stat-card">
+                <div class="stat-icon green">?</div>
+                <p>Total Questions</p>
+                <h2 id="totalQuestions">0</h2>
+            </article>
+            <article class="stat-card">
+                <div class="stat-icon orange">◷</div>
+                <p>Exam Attempts</p>
+                <h2 id="totalAttempts">0</h2>
+            </article>
+        </section>
+
+        <h2 class="section-title">Management Services</h2>
+
+        <section class="cards">
+            <a class="service-card" href="insert.html">
+                <div class="service-icon">＋</div>
+                <h3>Create Quiz & Questions</h3>
+                <p>Teachers can create examinations and add multiple-choice questions.</p>
+                <span>Open page →</span>
+            </a>
+
+            <a class="service-card" href="delete.html">
+                <div class="service-icon red-icon">×</div>
+                <h3>Delete Records</h3>
+                <p>Remove quizzes and individual questions from the database.</p>
+                <span>Open page →</span>
+            </a>
+
+            <a class="service-card" href="list.html">
+                <div class="service-icon">▤</div>
+                <h3>Quiz List & Results</h3>
+                <p>View available quizzes and student examination results.</p>
+                <span>Open page →</span>
+            </a>
+
+            <a class="service-card" href="listone.html">
+                <div class="service-icon">⌕</div>
+                <h3>Find One Quiz</h3>
+                <p>Search for a quiz using its unique quiz ID.</p>
+                <span>Open page →</span>
+            </a>
+
+            <a class="service-card" href="exam.html">
+                <div class="service-icon">✓</div>
+                <h3>Attend Examination</h3>
+                <p>Students can select a quiz, answer questions and submit the exam.</p>
+                <span>Open page →</span>
+            </a>
+        </section>
+
+        <section class="panel auth-panel">
+            <div class="auth-grid">
+                <form id="loginForm">
+                    <h2>Login</h2>
+                    <label>Email
+                        <input type="email" name="email" required placeholder="Enter email">
+                    </label>
+                    <label>Password
+                        <input type="password" name="password" required placeholder="Enter password">
+                    </label>
+                    <button class="btn" type="submit">Login</button>
+                    <p id="loginMessage" class="message"></p>
+                </form>
+
+                <form id="registerForm">
+                    <h2>Create Account</h2>
+                    <label>Name
+                        <input name="name" required placeholder="Enter your name">
+                    </label>
+                    <label>Email
+                        <input type="email" name="email" required placeholder="Enter email">
+                    </label>
+                    <label>Password
+                        <input type="password" name="password" required placeholder="Create password">
+                    </label>
+                    <label>Role
+                        <select name="role" required>
+                            <option value="">Select role</option>
+                            <option value="teacher">Teacher</option>
+                            <option value="student">Student</option>
+                        </select>
+                    </label>
+                    <button class="btn btn-dark" type="submit">Register</button>
+                    <p id="registerMessage" class="message"></p>
+                </form>
+            </div>
+        </section>
+
+        <footer>BHAVANA · Online Quiz Examination Management System</footer>
+    </main>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Records - BHAVANA</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <a class="logo" href="/">BHAVANA<span>.</span></a>
+        <nav>
+            <a href="/">Dashboard</a>
+            <a href="insert.html">Create Quiz</a>
+            <a href="delete.html">Delete</a>
+            <a href="list.html">Quiz List</a>
+            <a href="listone.html">Find Quiz</a>
+            <a href="exam.html">Attend Exam</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="page-heading">
+            <p class="eyebrow">REMOVE RECORDS</p>
+            <h1>Delete Quiz or Question</h1>
+            <p>Remove an examination or an individual question using its ID.</p>
+        </section>
+
+        <section class="form-layout">
+            <form id="deleteQuizForm" class="panel">
+                <h2>Delete Quiz</h2>
+                <label>Quiz ID
+                    <input type="number" name="quiz_id" min="1" required placeholder="Enter quiz ID">
+                </label>
+                <button class="btn btn-danger" type="submit">Delete Quiz</button>
+                <p id="deleteQuizMessage" class="message"></p>
+                <p class="note">Deleting a quiz also deletes its questions and saved results.</p>
+            </form>
+
+            <form id="deleteQuestionForm" class="panel">
+                <h2>Delete Question</h2>
+                <label>Question ID
+                    <input type="number" name="question_id" min="1" required placeholder="Enter question ID">
+                </label>
+                <button class="btn btn-danger" type="submit">Delete Question</button>
+                <p id="deleteQuestionMessage" class="message"></p>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

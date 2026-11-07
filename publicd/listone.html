@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Quiz - BHAVANA</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <a class="logo" href="/">BHAVANA<span>.</span></a>
+        <nav>
+            <a href="/">Dashboard</a>
+            <a href="insert.html">Create Quiz</a>
+            <a href="delete.html">Delete</a>
+            <a href="list.html">Quiz List</a>
+            <a href="listone.html">Find Quiz</a>
+            <a href="exam.html">Attend Exam</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="page-heading">
+            <p class="eyebrow">QUIZ LOOKUP</p>
+            <h1>Find One Quiz</h1>
+            <p>Search for a quiz using its unique quiz ID and view its questions.</p>
+        </section>
+
+        <section class="panel form-panel">
+            <form id="findQuizForm">
+                <label>Quiz ID
+                    <input type="number" name="quiz_id" min="1" required placeholder="Enter quiz ID">
+                </label>
+                <button class="btn" type="submit">Find Quiz</button>
+            </form>
+            <div id="quizDetails" class="details-card hidden"></div>
+            <p id="findQuizMessage" class="message"></p>
+        </section>
+    </main>
+</body>
+</html>

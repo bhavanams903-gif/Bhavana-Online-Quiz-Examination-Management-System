@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attend Exam - BHAVANA</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <a class="logo" href="/">BHAVANA<span>.</span></a>
+        <nav>
+            <a href="/">Dashboard</a>
+            <a href="insert.html">Create Quiz</a>
+            <a href="delete.html">Delete</a>
+            <a href="list.html">Quiz List</a>
+            <a href="listone.html">Find Quiz</a>
+            <a href="exam.html">Attend Exam</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="page-heading">
+            <p class="eyebrow">STUDENT EXAMINATION</p>
+            <h1>Attend Online Quiz</h1>
+            <p>Enter your student ID and choose an examination to begin.</p>
+        </section>
+
+        <section class="panel exam-start">
+            <form id="startExamForm">
+                <label>Student ID
+                    <input type="number" name="user_id" min="1" required placeholder="Enter your registered user ID">
+                </label>
+                <label>Select Quiz
+                    <select name="quiz_id" id="examQuizSelect" required>
+                        <option value="">Select a quiz</option>
+                    </select>
+                </label>
+                <button class="btn" type="submit">Start Examination</button>
+                <p id="examStartMessage" class="message"></p>
+            </form>
+        </section>
+
+        <section id="examArea" class="hidden">
+            <div class="exam-summary">
+                <div>
+                    <span>Exam Type</span>
+                    <strong id="examTitle">Quiz</strong>
+                </div>
+                <div>
+                    <span>Subject</span>
+                    <strong id="examSubject">Subject</strong>
+                </div>
+                <div class="progress-box">
+                    <div class="progress-heading">
+                        <strong id="completedText">Completed (0/0)</strong>
+                        <span id="progressPercent">0%</span>
+                    </div>
+                    <div class="progress-track"><div id="progressBar"></div></div>
+                </div>
+                <button class="btn submit-main" id="submitExamButton" type="button">Submit Answer</button>
+            </div>
+
+            <div class="exam-layout">
+                <div class="question-area">
+                    <div class="question-top">
+                        <span id="questionNumber" class="question-label">Question 1</span>
+                        <button id="bookmarkButton" class="bookmark-btn" type="button">☆</button>
+                    </div>
+                    <h2 id="questionText">Question appears here</h2>
+                    <div id="optionsArea" class="options-area"></div>
+                    <div class="question-navigation">
+                        <button type="button" onclick="goFirst()">First</button>
+                        <button type="button" onclick="goPrevious()">Back</button>
+                        <span id="pageCount">1 / 1</span>
+                        <button type="button" onclick="goNext()">Next</button>
+                        <button type="button" onclick="goLast()">Last</button>
+                    </div>
+                </div>
+
+                <aside class="exam-sidebar">
+                    <div class="timer-card">
+                        <div class="timer-circle"><span id="timerDisplay">00:00</span></div>
+                        <p>Timer Remaining</p>
+                    </div>
+                    <div class="side-card">
+                        <button type="button" onclick="showBookmarked()">View Bookmarked</button>
+                        <button type="button" onclick="showAnswered()">View Answered</button>
+                        <div id="questionNumbers" class="question-numbers"></div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <section id="examResult" class="result-card hidden">
+            <h2>Examination Completed</h2>
+            <div class="result-score" id="finalScore">0</div>
+            <p id="resultMessage"></p>
+            <a class="btn" href="list.html">View Results</a>
+        </section>
+    </main>
+</body>
+</html>
